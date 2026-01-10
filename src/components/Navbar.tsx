@@ -72,24 +72,15 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="flex items-center gap-4">
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-            >
-              Get Started
-            </motion.button>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-zinc-600 hover:text-zinc-900 transition-colors"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-zinc-600 hover:text-zinc-900 transition-colors"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Menu */}
@@ -113,9 +104,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-full text-sm font-medium">
-              Get Started
-            </button>
           </div>
         </motion.div>
       </motion.nav>

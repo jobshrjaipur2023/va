@@ -51,9 +51,9 @@ export const marketingContent = {
       icon: "FileText",
     },
     {
-      title: "Skill Assessment",
-      description: "Professional screening and training to match you with the perfect role for your qualifications.",
-      icon: "UserCheck",
+      title: "Global Recruitment",
+      description: "Connecting you with top international companies across various industries and sectors.",
+      icon: "Globe",
     },
   ],
 };
