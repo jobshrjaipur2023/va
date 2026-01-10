@@ -160,7 +160,7 @@ export default function PrivacyPolicyPage() {
                                 <li>Lodge a complaint with relevant data protection authorities</li>
                             </ul>
                             <p className="mt-4">
-                                To exercise these rights, please contact us at <a href="mailto:privacy@jobshrabroad.com" className="text-blue-600 hover:underline">privacy@jobshrabroad.com</a>
+                                To exercise these rights, please contact us at <a href="mailto:jobshrjaipur2023@gmail.com" className="text-blue-600 hover:underline">jobshrjaipur2023@gmail.com</a>
                             </p>
                         </div>
                     </section>
@@ -202,7 +202,7 @@ export default function PrivacyPolicyPage() {
                             <p>If you have any questions about this Privacy Policy, please contact us:</p>
                             <p className="font-medium text-zinc-900">Job's HR Abroad Labour Service</p>
                             <p>K-A-7 Third Floor, JTM Mall, Jagatpura, Jaipur (Rajasthan) 302017</p>
-                            <p>Email: <a href="mailto:privacy@jobshrabroad.com" className="text-blue-600 hover:underline">privacy@jobshrabroad.com</a></p>
+                            <p>Email: <a href="mailto:jobshrjaipur2023@gmail.com" className="text-blue-600 hover:underline">jobshrjaipur2023@gmail.com</a></p>
                             <p>Phone: <a href="tel:+919460724814" className="text-blue-600 hover:underline">+91 94607 24814</a></p>
                         </div>
                     </section>

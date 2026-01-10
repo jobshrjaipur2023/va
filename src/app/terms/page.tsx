@@ -226,7 +226,7 @@ export default function TermsPage() {
                             <p>If you have any questions about these Terms, please contact us:</p>
                             <p className="font-medium text-zinc-900">Job's HR Abroad Labour Service</p>
                             <p>K-A-7 Third Floor, JTM Mall, Jagatpura, Jaipur (Rajasthan) 302017</p>
-                            <p>Email: <a href="mailto:support@jobshrabroad.com" className="text-blue-600 hover:underline">support@jobshrabroad.com</a></p>
+                            <p>Email: <a href="mailto:jobshrjaipur2023@gmail.com" className="text-blue-600 hover:underline">jobshrjaipur2023@gmail.com</a></p>
                             <p>Phone: <a href="tel:+919460724814" className="text-blue-600 hover:underline">+91 94607 24814</a></p>
                         </div>
                     </section>

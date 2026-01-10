@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight, Globe, Users, Briefcase, CheckCircle } from "lucide-react";
 
 const stats = [
@@ -80,14 +81,16 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
-          <motion.button
-            whileHover={{ scale: 1.03, boxShadow: "0 20px 40px -15px rgba(59, 130, 246, 0.4)" }}
-            whileTap={{ scale: 0.98 }}
-            className="h-14 px-8 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full font-medium text-base transition-all duration-300 flex items-center gap-2 shadow-lg shadow-blue-500/25"
-          >
-            Explore Jobs
-            <ArrowRight className="w-5 h-5" />
-          </motion.button>
+          <Link href="/jobs">
+            <motion.button
+              whileHover={{ scale: 1.03, boxShadow: "0 20px 40px -15px rgba(59, 130, 246, 0.4)" }}
+              whileTap={{ scale: 0.98 }}
+              className="h-14 px-8 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full font-medium text-base transition-all duration-300 flex items-center gap-2 shadow-lg shadow-blue-500/25"
+            >
+              Explore Jobs
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </Link>
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const destinations = [
     { name: "Dubai", country: "UAE", image: "/images/dubai.webp", jobs: "120+" },
@@ -95,13 +96,15 @@ export function DestinationsMarquee() {
 
                                 {/* Hover Effect - View Jobs Button */}
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                                    <motion.button
-                                        initial={{ scale: 0.8, opacity: 0 }}
-                                        whileHover={{ scale: 1.05 }}
-                                        className="bg-white text-zinc-900 px-6 py-2.5 rounded-full font-medium text-sm shadow-xl hover:bg-zinc-50 transition-colors"
-                                    >
-                                        Explore Jobs →
-                                    </motion.button>
+                                    <Link href="/jobs">
+                                        <motion.button
+                                            initial={{ scale: 0.8, opacity: 0 }}
+                                            whileHover={{ scale: 1.05 }}
+                                            className="bg-white text-zinc-900 px-6 py-2.5 rounded-full font-medium text-sm shadow-xl hover:bg-zinc-50 transition-colors"
+                                        >
+                                            Explore Jobs →
+                                        </motion.button>
+                                    </Link>
                                 </div>
                             </div>
                         </motion.div>
