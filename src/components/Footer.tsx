@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Send, MapPin, Phone, Mail } from "lucide-react";
 
 const footerLinks = {
   services: [
@@ -20,138 +20,193 @@ const footerLinks = {
   ],
 };
 
-
-
 export function Footer() {
   return (
-    <footer className="bg-zinc-900 text-white relative overflow-hidden">
-      {/* Gradient Decoration */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+    <footer className="bg-gradient-to-b from-zinc-900 via-zinc-900 to-black text-white relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[100px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/3 to-cyan-500/3 rounded-full blur-[120px]" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Top Section */}
-        <div className="py-16 border-b border-zinc-800">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Start Your{" "}
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Global Journey?
-                </span>
-              </h2>
-              <p className="text-zinc-400 text-lg max-w-lg">
-                Subscribe to get the latest job opportunities and career tips delivered to your inbox.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-zinc-800/50 border border-zinc-700 text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-zinc-500"
-              />
+        {/* Top CTA Section */}
+        <div className="py-20 border-b border-white/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl font-bold mb-6"
+            >
+              Ready to Start Your{" "}
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Global Journey?
+              </span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-zinc-400 text-lg mb-10 max-w-2xl mx-auto"
+            >
+              Subscribe to get the latest job opportunities and career tips delivered to your inbox.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto"
+            >
+              <div className="flex-1 relative">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="w-full bg-white/5 backdrop-blur-sm border border-white/10 text-white px-6 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-zinc-500"
+                />
+              </div>
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all whitespace-nowrap"
+                className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all flex items-center justify-center gap-2"
               >
                 Subscribe
+                <Send className="w-4 h-4" />
               </motion.button>
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        {/* Main Footer */}
-        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand & About */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-3 mb-6">
-              <Image
-                src="/images/logo.webp"
-                alt="Job's HR Abroad"
-                width={48}
-                height={48}
-                className="rounded-lg"
-              />
-              <div>
-                <span className="font-bold text-lg block">JOB&apos;S HR ABROAD</span>
-                <span className="text-xs tracking-wider text-zinc-500 uppercase">
-                  Labour Service
+        {/* Main Footer Content */}
+        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-12 gap-12">
+          {/* Brand Section */}
+          <div className="lg:col-span-5">
+            <Link href="/" className="flex items-center gap-4 mb-8 group no-underline">
+              {/* Stylized Logo */}
+              <div className="relative w-14 h-14 flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl blur-lg opacity-60 group-hover:opacity-100 transition-opacity" />
+                <div className="relative h-full w-full bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center shadow-xl">
+                  <span className="text-white font-black text-2xl">J</span>
+                </div>
+              </div>
+
+              {/* Brand Text */}
+              <div className="flex flex-col">
+                <span className="font-bold text-2xl tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">
+                  JOB&apos;S HR ABROAD
                 </span>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+                  <span className="text-xs font-medium tracking-[0.2em] text-zinc-400 uppercase">
+                    Labour Service
+                  </span>
+                </div>
               </div>
             </Link>
 
-            <p className="text-zinc-400 leading-relaxed text-sm mb-6 max-w-sm">
-              Connecting global talent with world-class opportunities. Your trusted partner in international recruitment.
+            <p className="text-zinc-400 leading-relaxed mb-8 max-w-sm">
+              Connecting global talent with world-class opportunities. Your trusted partner in international recruitment since 2015.
             </p>
 
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-4 border-t border-zinc-800">
-              <div>
-                <span className="text-2xl font-bold text-white">1000+</span>
-                <p className="text-xs text-zinc-500">Workers Placed</p>
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-blue-400" />
+                </div>
+                <span className="text-sm">K-A-7 Third Floor, JTM Mall, Jagatpura, Jaipur</span>
               </div>
-              <div>
-                <span className="text-2xl font-bold text-white">15+</span>
-                <p className="text-xs text-zinc-500">Countries</p>
+              <div className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                </div>
+                <span className="text-sm">+91 94607 24814</span>
               </div>
-              <div>
-                <span className="text-2xl font-bold text-white">8+</span>
-                <p className="text-xs text-zinc-500">Years Experience</p>
+              <div className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center">
+                  <Mail className="w-4 h-4 text-blue-400" />
+                </div>
+                <span className="text-sm">jobshrjaipur2023@gmail.com</span>
               </div>
             </div>
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="font-semibold text-white mb-6">Our Services</h4>
+          <div className="lg:col-span-4">
+            <h4 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" />
+              Our Services
+            </h4>
             <ul className="space-y-4">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-zinc-400 hover:text-white transition-colors text-sm flex items-center gap-1 group"
+                    className="text-zinc-400 hover:text-white transition-colors text-sm flex items-center gap-2 group"
                   >
+                    <span className="w-1.5 h-1.5 bg-zinc-600 rounded-full group-hover:bg-blue-500 transition-colors" />
                     {link.label}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company & Success Stories */}
-          <div>
-            <h4 className="font-semibold text-white mb-6">Quick Links</h4>
+          {/* Quick Links */}
+          <div className="lg:col-span-3">
+            <h4 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+              <div className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
+              Quick Links
+            </h4>
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-zinc-400 hover:text-white transition-colors text-sm flex items-center gap-1 group"
+                    className="text-zinc-400 hover:text-white transition-colors text-sm flex items-center gap-2 group"
                   >
+                    <span className="w-1.5 h-1.5 bg-zinc-600 rounded-full group-hover:bg-cyan-500 transition-colors" />
                     {link.label}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </li>
               ))}
             </ul>
+
+            {/* Stats Mini */}
+            <div className="mt-10 grid grid-cols-3 gap-4">
+              <div className="text-center">
+                <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">1K+</span>
+                <p className="text-[10px] text-zinc-500 uppercase tracking-wider mt-1">Placed</p>
+              </div>
+              <div className="text-center">
+                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">15+</span>
+                <p className="text-[10px] text-zinc-500 uppercase tracking-wider mt-1">Countries</p>
+              </div>
+              <div className="text-center">
+                <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">8+</span>
+                <p className="text-[10px] text-zinc-500 uppercase tracking-wider mt-1">Years</p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-zinc-500 text-sm">
             © {new Date().getFullYear()} Job&apos;s HR Abroad Labour Service. All rights reserved.
           </p>
 
-
-
-          <div className="flex gap-6 text-sm text-zinc-500">
-            <Link href="/privacy" className="hover:text-white transition-colors">
+          <div className="flex items-center gap-8">
+            <Link href="/privacy" className="text-zinc-500 hover:text-white transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <Link href="/terms" className="text-zinc-500 hover:text-white transition-colors text-sm">
               Terms of Service
             </Link>
           </div>
