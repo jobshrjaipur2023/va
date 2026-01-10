@@ -3,26 +3,20 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
 
 const footerLinks = {
   services: [
-    { label: "Recruitment", href: "#" },
-    { label: "Visa Processing", href: "#" },
-    { label: "Consultancy", href: "#" },
-    { label: "Training", href: "#" },
+    { label: "International Recruitment", href: "#services" },
+    { label: "Visa & Documentation", href: "#services" },
+    { label: "Manpower Supply", href: "#services" },
+    { label: "Interview Preparation", href: "#services" },
+    { label: "Pre-Departure Training", href: "#services" },
   ],
   company: [
     { label: "About Us", href: "/about" },
-    { label: "Success Stories", href: "#" },
-    { label: "Partners", href: "#" },
-    { label: "Contact", href: "/contact" },
-  ],
-  destinations: [
-    { label: "UAE Jobs", href: "#" },
-    { label: "UK Jobs", href: "#" },
-    { label: "Canada Jobs", href: "#" },
-    { label: "Europe Jobs", href: "#" },
+    { label: "Success Stories", href: "/success-stories" },
+    { label: "Contact", href: "/#contact" },
   ],
 };
 
@@ -73,8 +67,8 @@ export function Footer() {
         </div>
 
         {/* Main Footer */}
-        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Brand */}
+        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand & About */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6">
               <Image
@@ -91,15 +85,31 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-zinc-400 leading-relaxed mb-6 max-w-sm">
-              Connecting global talent with world-class opportunities. Your trusted partner in international recruitment and career placement since 2015.
+
+            <p className="text-zinc-400 leading-relaxed text-sm mb-6 max-w-sm">
+              Connecting global talent with world-class opportunities. Your trusted partner in international recruitment.
             </p>
 
+            {/* Quick Stats */}
+            <div className="grid grid-cols-3 gap-4 pt-4 border-t border-zinc-800">
+              <div>
+                <span className="text-2xl font-bold text-white">1000+</span>
+                <p className="text-xs text-zinc-500">Workers Placed</p>
+              </div>
+              <div>
+                <span className="text-2xl font-bold text-white">15+</span>
+                <p className="text-xs text-zinc-500">Countries</p>
+              </div>
+              <div>
+                <span className="text-2xl font-bold text-white">8+</span>
+                <p className="text-xs text-zinc-500">Years Experience</p>
+              </div>
+            </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-white mb-6">Services</h4>
+            <h4 className="font-semibold text-white mb-6">Our Services</h4>
             <ul className="space-y-4">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
@@ -115,29 +125,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company & Success Stories */}
           <div>
-            <h4 className="font-semibold text-white mb-6">Company</h4>
+            <h4 className="font-semibold text-white mb-6">Quick Links</h4>
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-zinc-400 hover:text-white transition-colors text-sm flex items-center gap-1 group"
-                  >
-                    {link.label}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Destinations */}
-          <div>
-            <h4 className="font-semibold text-white mb-6">Destinations</h4>
-            <ul className="space-y-4">
-              {footerLinks.destinations.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -178,14 +170,11 @@ export function Footer() {
           </div>
 
           <div className="flex gap-6 text-sm text-zinc-500">
-            <Link href="#" className="hover:text-white transition-colors">
-              Privacy
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Terms
-            </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Cookies
+            <Link href="/terms" className="hover:text-white transition-colors">
+              Terms of Service
             </Link>
           </div>
         </div>
