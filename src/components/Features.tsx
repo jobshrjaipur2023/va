@@ -1,8 +1,30 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { marketingContent } from "@/data/content";
-import * as Icons from "lucide-react";
+import Image from "next/image";
+
+const features = [
+  {
+    title: "Dubai & UAE Specialists",
+    description: "500+ active positions in Dubai's construction, hospitality, and engineering sectors. Direct employer connections with top UAE companies.",
+    image: "/images/feature-dubai.png",
+  },
+  {
+    title: "Complete Visa Support",
+    description: "End-to-end visa processing, documentation, medical tests, and flight arrangements. We handle all paperwork so you can focus on your career.",
+    image: "/images/feature-visa.png",
+  },
+  {
+    title: "Verified Employer Network",
+    description: "Direct partnerships with verified international employers in UAE, UK, Europe, and Canada. No middlemen, no hidden fees.",
+    image: "/images/feature-network.png",
+  },
+  {
+    title: "Skilled Worker Placements",
+    description: "Specialists in placing construction workers, engineers, technicians, drivers, hospitality staff, and healthcare professionals abroad.",
+    image: "/images/feature-workers.png",
+  },
+];
 
 export function Features() {
   const container: Variants = {
@@ -38,13 +60,13 @@ export function Features() {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">
-            Everything You Need for a{" "}
+            Your Trusted Partner for{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              Successful Career
+              Dubai & International Jobs
             </span>
           </h2>
           <p className="text-lg text-zinc-500 leading-relaxed">
-            From initial consultation to your first day at work abroad, we handle every step with expert precision and care.
+            From skill assessment to your first day at work in Dubai, UK, or Europe – we handle every step with care and transparency.
           </p>
         </motion.div>
 
@@ -53,39 +75,37 @@ export function Features() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {marketingContent.features.map((feature, idx) => {
-            const IconComponent = (Icons as any)[feature.icon] || Icons.HelpCircle;
+          {features.map((feature, idx) => (
+            <motion.div
+              key={idx}
+              variants={item}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="group relative rounded-3xl bg-white border border-zinc-100 hover:border-blue-100 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 overflow-hidden"
+            >
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+              </div>
 
-            return (
-              <motion.div
-                key={idx}
-                variants={item}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className="group relative p-8 rounded-3xl bg-white border border-zinc-100 hover:border-blue-100 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
-              >
-                {/* Gradient Background on Hover */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-50/0 to-cyan-50/0 group-hover:from-blue-50/50 group-hover:to-cyan-50/50 transition-all duration-500" />
-
-                <div className="relative z-10">
-                  <motion.div
-                    whileHover={{ rotate: [0, -10, 10, 0] }}
-                    transition={{ duration: 0.5 }}
-                    className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/25 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <IconComponent size={26} strokeWidth={1.5} className="text-white" />
-                  </motion.div>
-                  <h3 className="text-xl font-bold text-zinc-900 mb-3 tracking-tight">
-                    {feature.title}
-                  </h3>
-                  <p className="text-zinc-500 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-zinc-900 mb-2 tracking-tight">
+                  {feature.title}
+                </h3>
+                <p className="text-zinc-500 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

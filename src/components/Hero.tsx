@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Globe, Users, Briefcase, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 const stats = [
-  { value: "5000+", label: "Active Workers", icon: Users },
-  { value: "25+", label: "Partner Countries", icon: Globe },
-  { value: "100+", label: "Corporate Clients", icon: Briefcase },
+  { value: "5000+", label: "Active Workers" },
+  { value: "25+", label: "Partner Countries" },
+  { value: "100+", label: "Corporate Clients" },
 ];
 
 const highlights = [
@@ -91,43 +91,30 @@ export function Hero() {
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </Link>
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="h-14 px-8 bg-white text-zinc-700 border-2 border-zinc-200 rounded-full font-medium text-base hover:bg-zinc-50 hover:border-zinc-300 transition-all flex items-center gap-2"
-          >
-            Contact Support
-          </motion.button>
         </motion.div>
 
-        {/* Stats */}
+        {/* Stats - Clean Design Without Icons */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          className="flex justify-center gap-12 md:gap-20 max-w-3xl mx-auto"
         >
-          {stats.map((stat, idx) => {
-            const Icon = stat.icon;
-            return (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + idx * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="text-center group"
-              >
-                <div className="flex justify-center mb-3">
-                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center border border-zinc-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-5 h-5 text-blue-600" />
-                  </div>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-1">{stat.value}</h3>
-                <p className="text-sm text-zinc-500 font-medium">{stat.label}</p>
-              </motion.div>
-            );
-          })}
+          {stats.map((stat, idx) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 + idx * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="text-center group"
+            >
+              <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
+                {stat.value}
+              </h3>
+              <p className="text-sm md:text-base text-zinc-500 font-medium">{stat.label}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
 

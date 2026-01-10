@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const footerLinks = {
   services: [
@@ -20,12 +20,7 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-];
+
 
 export function Footer() {
   return (
@@ -150,24 +145,7 @@ export function Footer() {
             © {new Date().getFullYear()} Job&apos;s HR Abroad Labour Service. All rights reserved.
           </p>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            {socialLinks.map((social) => {
-              const Icon = social.icon;
-              return (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-zinc-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-all"
-                  aria-label={social.label}
-                >
-                  <Icon className="w-4 h-4" />
-                </motion.a>
-              );
-            })}
-          </div>
+
 
           <div className="flex gap-6 text-sm text-zinc-500">
             <Link href="/privacy" className="hover:text-white transition-colors">
