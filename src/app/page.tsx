@@ -2,6 +2,8 @@ import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { DestinationsMarquee } from "@/components/DestinationsMarquee";
 import { Destinations } from "@/components/Destinations";
+import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
+import { ContactSection } from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <DestinationsMarquee />
       <Features />
       <Destinations />
+      <TestimonialsMarquee />
+      <ContactSection />
     </>
   );
 }

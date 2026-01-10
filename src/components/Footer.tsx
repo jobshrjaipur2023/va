@@ -94,27 +94,7 @@ export function Footer() {
             <p className="text-zinc-400 leading-relaxed mb-6 max-w-sm">
               Connecting global talent with world-class opportunities. Your trusted partner in international recruitment and career placement since 2015.
             </p>
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <a
-                href="mailto:info@jobshrabroad.com"
-                className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">info@jobshrabroad.com</span>
-              </a>
-              <a
-                href="tel:+919876543210"
-                className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">+91 98765 43210</span>
-              </a>
-              <div className="flex items-start gap-3 text-zinc-400">
-                <MapPin className="w-4 h-4 mt-0.5" />
-                <span className="text-sm">New Delhi, India</span>
-              </div>
-            </div>
+
           </div>
 
           {/* Services */}
