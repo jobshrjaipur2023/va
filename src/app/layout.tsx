@@ -19,13 +19,13 @@ const inter = Inter({
 
 // Comprehensive SEO Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jobshrabroad.com"),
+  metadataBase: new URL("https://jobshrabroad.in"),
   title: {
     default: "Job's HR Abroad | #1 International Recruitment Agency in Jaipur, India",
     template: "%s | Job's HR Abroad",
   },
   description:
-    "Job's HR Abroad is India's leading overseas recruitment agency based in Jaipur. We connect skilled Indian professionals with verified employers in UAE, Saudi Arabia, Qatar, UK, Canada, Germany, Russia & Mauritius. 10,000+ successful placements since 2015. Free consultation available.",
+    "Job's HR Abroad is India's leading overseas recruitment agency based in Jaipur. We connect skilled Indian professionals with verified employers in UAE, Saudi Arabia, Qatar, UK, Canada, German[...]
   keywords: [
     // Primary Keywords
     "international recruitment agency india",
@@ -64,8 +64,8 @@ export const metadata: Metadata = {
     "aman sharma recruitment",
   ],
   authors: [
-    { name: "Varis Khan", url: "https://jobshrabroad.com/about" },
-    { name: "Aman Sharma", url: "https://jobshrabroad.com/about" },
+    { name: "Varis Khan", url: "https://jobshrabroad.in/about" },
+    { name: "Aman Sharma", url: "https://jobshrabroad.in/about" },
   ],
   creator: "Job's HR Abroad",
   publisher: "Job's HR Abroad Labour Service",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://jobshrabroad.com",
+    url: "https://jobshrabroad.in",
     siteName: "Job's HR Abroad",
     title: "Job's HR Abroad | Best International Recruitment Agency in India",
     description:
@@ -122,10 +122,10 @@ export const metadata: Metadata = {
     google: "your-google-verification-code", // Add your Google Search Console code
   },
   alternates: {
-    canonical: "https://jobshrabroad.com",
+    canonical: "https://jobshrabroad.in",
     languages: {
-      "en-IN": "https://jobshrabroad.com",
-      "en-US": "https://jobshrabroad.com",
+      "en-IN": "https://jobshrabroad.in",
+      "en-US": "https://jobshrabroad.in",
     },
   },
   category: "Employment Agency",
@@ -138,17 +138,17 @@ const structuredData = {
     // Organization Schema
     {
       "@type": "Organization",
-      "@id": "https://jobshrabroad.com/#organization",
+      "@id": "https://jobshrabroad.in/#organization",
       name: "Job's HR Abroad",
       alternateName: ["Jobs HR Abroad", "Job's HR Abroad Labour Service"],
-      url: "https://jobshrabroad.com",
+      url: "https://jobshrabroad.in",
       logo: {
         "@type": "ImageObject",
-        url: "https://jobshrabroad.com/images/logo.webp",
+        url: "https://jobshrabroad.in/images/logo.webp",
         width: 200,
         height: 200,
       },
-      description: "Job's HR Abroad is India's leading international recruitment agency specializing in overseas job placements. Founded by Varis Khan and Aman Sharma, we have successfully placed over 10,000 Indian professionals in UAE, Saudi Arabia, Qatar, UK, Canada, Germany, Russia, and Mauritius since 2015.",
+      description: "Job's HR Abroad is India's leading international recruitment agency specializing in overseas job placements. Founded by Varis Khan and Aman Sharma, we have successfully placed[...]
       foundingDate: "2015",
       founders: [
         {
@@ -188,10 +188,10 @@ const structuredData = {
     // LocalBusiness Schema
     {
       "@type": "EmploymentAgency",
-      "@id": "https://jobshrabroad.com/#localbusiness",
+      "@id": "https://jobshrabroad.in/#localbusiness",
       name: "Job's HR Abroad",
-      image: "https://jobshrabroad.com/images/logo.webp",
-      url: "https://jobshrabroad.com",
+      image: "https://jobshrabroad.in/images/logo.webp",
+      url: "https://jobshrabroad.in",
       telephone: "+91-94607-24814",
       email: "jobshrjaipur2023@gmail.com",
       address: {
@@ -227,16 +227,16 @@ const structuredData = {
     // WebSite Schema with SearchAction
     {
       "@type": "WebSite",
-      "@id": "https://jobshrabroad.com/#website",
-      url: "https://jobshrabroad.com",
+      "@id": "https://jobshrabroad.in/#website",
+      url: "https://jobshrabroad.in",
       name: "Job's HR Abroad",
       description: "India's #1 International Recruitment Agency for Overseas Jobs",
-      publisher: { "@id": "https://jobshrabroad.com/#organization" },
+      publisher: { "@id": "https://jobshrabroad.in/#organization" },
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate: "https://jobshrabroad.com/jobs?search={search_term_string}",
+          urlTemplate: "https://jobshrabroad.in/jobs?search={search_term_string}",
         },
         "query-input": "required name=search_term_string",
       },
@@ -244,14 +244,14 @@ const structuredData = {
     // FAQPage Schema for AEO/GEO
     {
       "@type": "FAQPage",
-      "@id": "https://jobshrabroad.com/#faq",
+      "@id": "https://jobshrabroad.in/#faq",
       mainEntity: [
         {
           "@type": "Question",
           name: "What is Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Job's HR Abroad is India's leading international recruitment agency based in Jaipur, Rajasthan. Founded by Varis Khan and Aman Sharma in 2015, we specialize in connecting skilled Indian professionals with verified employers in UAE, Saudi Arabia, Qatar, UK, Canada, Germany, Russia, and Mauritius. We have successfully placed over 10,000 candidates in overseas positions.",
+            text: "Job's HR Abroad is India's leading international recruitment agency based in Jaipur, Rajasthan. Founded by Varis Khan and Aman Sharma in 2015, we specialize in connecting skill[...]
           },
         },
         {
@@ -259,7 +259,7 @@ const structuredData = {
           name: "Which countries does Job's HR Abroad provide jobs for?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Job's HR Abroad provides job placements in multiple countries including: UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah), Qatar (Doha), United Kingdom (London), Canada (Toronto, Vancouver), Germany (Berlin), Russia (Moscow), and Mauritius. We specialize in Gulf countries with the highest success rate in UAE and Saudi Arabia.",
+            text: "Job's HR Abroad provides job placements in multiple countries including: UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah), Qatar (Doha), United Kingdom (London), [...]
           },
         },
         {
@@ -267,7 +267,7 @@ const structuredData = {
           name: "What types of jobs are available through Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We offer a wide range of job categories including: Construction (Welders, Carpenters, Masons, Steel Fixers), Technical (Electricians, Plumbers, AC Technicians), Hospitality (Chefs, Waiters, Hotel Staff), Driving (Taxi Drivers, Delivery Riders for Talabat, Noon, Careem), Manufacturing (CNC Operators, Factory Workers), Healthcare (Nurses, Care Assistants), and Office roles (Document Controllers, Receptionists).",
+            text: "We offer a wide range of job categories including: Construction (Welders, Carpenters, Masons, Steel Fixers), Technical (Electricians, Plumbers, AC Technicians), Hospitality (Ch[...]
           },
         },
         {
@@ -275,7 +275,7 @@ const structuredData = {
           name: "Is Job's HR Abroad a genuine recruitment agency?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, Job's HR Abroad is a legitimate and government-registered recruitment agency operating from Jaipur, India. We are known for our transparent processes, verified employer networks, and zero-tolerance policy for fraud. With over 10,000 successful placements and a 4.8-star rating from 1,250+ reviews, we are one of India's most trusted overseas recruitment consultancies.",
+            text: "Yes, Job's HR Abroad is a legitimate and government-registered recruitment agency operating from Jaipur, India. We are known for our transparent processes, verified employer ne[...]
           },
         },
         {
@@ -283,7 +283,7 @@ const structuredData = {
           name: "How can I apply for overseas jobs through Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Applying for overseas jobs through Job's HR Abroad is simple: 1) Visit our website at jobshrabroad.com and browse available positions, 2) Click 'Apply Now' on any job listing and fill out the application form, 3) Our team will contact you within 24 hours for a free consultation, 4) We handle everything from interview preparation to visa processing and flight bookings.",
+            text: "Applying for overseas jobs through Job's HR Abroad is simple: 1) Visit our website at jobshrabroad.in and browse available positions, 2) Click 'Apply Now' on any job listing a[...]
           },
         },
         {
@@ -291,7 +291,7 @@ const structuredData = {
           name: "What is the consultation fee at Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Job's HR Abroad offers FREE initial consultation for all candidates. We assess your skills, experience, and career goals at no cost. Our transparent fee structure is discussed only after you receive a confirmed job offer from an employer. We never charge upfront fees before job confirmation.",
+            text: "Job's HR Abroad offers FREE initial consultation for all candidates. We assess your skills, experience, and career goals at no cost. Our transparent fee structure is discussed [...]
           },
         },
         {
@@ -299,7 +299,7 @@ const structuredData = {
           name: "How to contact Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "You can contact Job's HR Abroad through: Phone: +91 94607 24814, Email: jobshrjaipur2023@gmail.com, Office Address: K-A-7 Third Floor, JTM Mall, Jagatpura, Jaipur, Rajasthan 302017. Office hours are Monday to Saturday, 10 AM to 7 PM IST.",
+            text: "You can contact Job's HR Abroad through: Phone: +91 94607 24814, Email: jobshrjaipur2023@gmail.com, Office Address: K-A-7 Third Floor, JTM Mall, Jagatpura, Jaipur, Rajasthan 30[...]
           },
         },
       ],
@@ -316,7 +316,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://jobshrabroad.com" />
+        <link rel="canonical" href="https://jobshrabroad.in" />
         <meta name="geo.region" content="IN-RJ" />
         <meta name="geo.placename" content="Jaipur" />
         <meta name="geo.position" content="26.8485;75.8330" />
