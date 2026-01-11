@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     default: "Job's HR Abroad | #1 International Recruitment Agency in Jaipur, India",
     template: "%s | Job's HR Abroad",
   },
-  description:
-    "Job's HR Abroad is India's leading overseas recruitment agency based in Jaipur. We connect skilled Indian professionals with verified employers in UAE, Saudi Arabia, Qatar, UK, Canada, German[...]
+  description: `Job's HR Abroad is India's leading overseas recruitment agency based in Jaipur. 
+We connect skilled Indian professionals with verified employers in UAE, Saudi Arabia, Qatar, UK, Canada, Germany.`,
   keywords: [
     // Primary Keywords
     "international recruitment agency india",
