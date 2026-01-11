@@ -8,13 +8,14 @@ import { ArrowUpRight, Send, MapPin, Phone, Mail } from "lucide-react";
 const footerLinks = {
   services: [
     { label: "International Recruitment", href: "#services" },
-    { label: "Visa & Documentation", href: "#services" },
+    { label: "Visit Visa", href: "/visa#visit" },
+    { label: "Employment Visa", href: "/visa#employment" },
     { label: "Manpower Supply", href: "#services" },
     { label: "Interview Preparation", href: "#services" },
-    { label: "Pre-Departure Training", href: "#services" },
   ],
   company: [
     { label: "About Us", href: "/about" },
+    { label: "Visa Services", href: "/visa" },
     { label: "Success Stories", href: "/success-stories" },
     { label: "Contact", href: "/#contact" },
   ],
