@@ -31,56 +31,6 @@ export function Footer() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Top CTA Section */}
-        <div className="py-20 border-b border-white/10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold mb-6"
-            >
-              Ready to Start Your{" "}
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Global Journey?
-              </span>
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-zinc-400 text-lg mb-10 max-w-2xl mx-auto"
-            >
-              Subscribe to get the latest job opportunities and career tips delivered to your inbox.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto"
-            >
-              <div className="flex-1 relative">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="w-full bg-white/5 backdrop-blur-sm border border-white/10 text-white px-6 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-zinc-500"
-                />
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all flex items-center justify-center gap-2"
-              >
-                Subscribe
-                <Send className="w-4 h-4" />
-              </motion.button>
-            </motion.div>
-          </div>
-        </div>
-
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-12 gap-12">
           {/* Brand Section */}

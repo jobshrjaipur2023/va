@@ -33,21 +33,39 @@ export function JobApplicationModal({ isOpen, onClose, jobTitle, jobCategory }: 
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission - In production, connect to your backend/email service
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch('/api/send-job-application', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    jobTitle,
+                    jobCategory,
+                }),
+            });
 
-        // Here you would typically send data to your backend
-        console.log("Form submitted:", { ...formData, jobTitle, jobCategory });
+            if (!response.ok) {
+                throw new Error('Failed to submit application');
+            }
 
-        setIsSubmitting(false);
-        setIsSubmitted(true);
+            // Success
+            setIsSubmitted(true);
 
-        // Reset form after 2 seconds and close
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({ name: "", phone: "", email: "", city: "", experience: "", message: "" });
-            onClose();
-        }, 2000);
+            // Reset form after 2 seconds and close
+            setTimeout(() => {
+                setIsSubmitted(false);
+                setFormData({ name: "", phone: "", email: "", city: "", experience: "", message: "" });
+                onClose();
+            }, 3000);
+
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('Failed to submit application. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
