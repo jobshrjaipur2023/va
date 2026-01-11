@@ -148,7 +148,7 @@ const structuredData = {
         width: 200,
         height: 200,
       },
-      description: "Job's HR Abroad is India's leading international recruitment agency specializing in overseas job placements. Founded by Varis Khan and Aman Sharma, we have successfully placed[...]
+      description: "Job's HR Abroad is India's leading international recruitment agency specializing in overseas job placements. Founded by Varis Khan and Aman Sharma, we have successfully placed",
       foundingDate: "2015",
       founders: [
         {
@@ -251,7 +251,7 @@ const structuredData = {
           name: "What is Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Job's HR Abroad is India's leading international recruitment agency based in Jaipur, Rajasthan. Founded by Varis Khan and Aman Sharma in 2015, we specialize in connecting skill[...]
+            text: "Job's HR Abroad is India's leading international recruitment agency based in Jaipur, Rajasthan. Founded by Varis Khan and Aman Sharma in 2015, we specialize in connecting skill",
           },
         },
         {
@@ -259,7 +259,7 @@ const structuredData = {
           name: "Which countries does Job's HR Abroad provide jobs for?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Job's HR Abroad provides job placements in multiple countries including: UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah), Qatar (Doha), United Kingdom (London), [...]
+            text: "Job's HR Abroad provides job placements in multiple countries including: UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah), Qatar (Doha), United Kingdom (London)",
           },
         },
         {
@@ -267,7 +267,7 @@ const structuredData = {
           name: "What types of jobs are available through Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We offer a wide range of job categories including: Construction (Welders, Carpenters, Masons, Steel Fixers), Technical (Electricians, Plumbers, AC Technicians), Hospitality (Ch[...]
+            text: "We offer a wide range of job categories including: Construction (Welders, Carpenters, Masons, Steel Fixers), Technical (Electricians, Plumbers, AC Technicians), Hospitality ",
           },
         },
         {
@@ -275,7 +275,7 @@ const structuredData = {
           name: "Is Job's HR Abroad a genuine recruitment agency?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, Job's HR Abroad is a legitimate and government-registered recruitment agency operating from Jaipur, India. We are known for our transparent processes, verified employer ne[...]
+            text: "Yes, Job's HR Abroad is a legitimate and government-registered recruitment agency operating from Jaipur, India. We are known for our transparent processes, verified employer ",
           },
         },
         {
@@ -283,7 +283,7 @@ const structuredData = {
           name: "How can I apply for overseas jobs through Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Applying for overseas jobs through Job's HR Abroad is simple: 1) Visit our website at jobshrabroad.in and browse available positions, 2) Click 'Apply Now' on any job listing a[...]
+            text: "Applying for overseas jobs through Job's HR Abroad is simple: 1) Visit our website at jobshrabroad.in and browse available positions, 2) Click 'Apply Now' on any job listing ",
           },
         },
         {
@@ -291,7 +291,7 @@ const structuredData = {
           name: "What is the consultation fee at Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Job's HR Abroad offers FREE initial consultation for all candidates. We assess your skills, experience, and career goals at no cost. Our transparent fee structure is discussed [...]
+            text: "Job's HR Abroad offers FREE initial consultation for all candidates. We assess your skills, experience, and career goals at no cost. Our transparent fee structure is discussed ",
           },
         },
         {
@@ -299,7 +299,7 @@ const structuredData = {
           name: "How to contact Job's HR Abroad?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "You can contact Job's HR Abroad through: Phone: +91 94607 24814, Email: jobshrjaipur2023@gmail.com, Office Address: K-A-7 Third Floor, JTM Mall, Jagatpura, Jaipur, Rajasthan 30[...]
+            text: "You can contact Job's HR Abroad through: Phone: +91 94607 24814, Email: jobshrjaipur2023@gmail.com, Office Address: K-A-7 Third Floor, JTM Mall, Jagatpura, Jaipur, Rajasthan ",
           },
         },
       ],
