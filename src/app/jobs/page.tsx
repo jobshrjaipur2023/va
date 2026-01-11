@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState, useMemo } from "react";
-import { Search, MapPin, Briefcase, DollarSign, Filter, X } from "lucide-react";
-import Link from "next/link";
+import { Search, MapPin, Briefcase, DollarSign, X } from "lucide-react";
+import { JobApplicationModal } from "@/components/JobApplicationModal";
 
 const jobs = [
     { city: "Dubai", category: "Construction", job_title: "Arc Welder", salary_aed: "1500 + OT", experience_level: "Experience" },
@@ -62,6 +62,10 @@ export default function JobsPage() {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [selectedExperience, setSelectedExperience] = useState("All");
 
+    // Modal state
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedJob, setSelectedJob] = useState({ title: "", category: "" });
+
     // Get unique categories
     const categories = useMemo(() => {
         const cats = Array.from(new Set(jobs.map(job => job.category)));
@@ -86,8 +90,21 @@ export default function JobsPage() {
         setSelectedExperience("All");
     };
 
+    const handleApplyClick = (jobTitle: string, jobCategory: string) => {
+        setSelectedJob({ title: jobTitle, category: jobCategory });
+        setIsModalOpen(true);
+    };
+
     return (
         <main className="min-h-screen bg-zinc-50 pt-24 pb-24">
+            {/* Job Application Modal */}
+            <JobApplicationModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                jobTitle={selectedJob.title}
+                jobCategory={selectedJob.category}
+            />
+
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-blue-600 to-cyan-500 py-20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
@@ -198,8 +215,8 @@ export default function JobsPage() {
                                     {job.category}
                                 </span>
                                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${job.experience_level.includes("Fresher")
-                                        ? "bg-green-50 text-green-700"
-                                        : "bg-purple-50 text-purple-700"
+                                    ? "bg-green-50 text-green-700"
+                                    : "bg-purple-50 text-purple-700"
                                     }`}>
                                     {job.experience_level}
                                 </span>
@@ -227,12 +244,12 @@ export default function JobsPage() {
                             </div>
 
                             {/* Apply Button */}
-                            <Link
-                                href="/#contact"
+                            <button
+                                onClick={() => handleApplyClick(job.job_title, job.category)}
                                 className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all"
                             >
                                 Apply Now
-                            </Link>
+                            </button>
                         </motion.div>
                     ))}
                 </div>
